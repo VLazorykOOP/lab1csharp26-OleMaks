@@ -59,7 +59,27 @@ string schedule = day switch
     _ => "Помилка: такого дня не існує"
 };
 Console.WriteLine($"Графік: {schedule}");
-
+//5
+Console.WriteLine("\n Квадрат частки двох чисел");
+Console.Write("Введіть перше ціле число (ділене): ");
+int num1 = int.Parse(Console.ReadLine()!);
+Console.Write("Введіть друге ціле число (дільник): ");
+int num2 = int.Parse(Console.ReadLine()!);
+if (num2 != 0)
+{
+    double rez5 = CalculateSquareOfDivision(num1, num2);
+    Console.WriteLine($"Результат: ({num1} / {num2})^2 = {rez5}");
+}
+else
+{
+    Console.WriteLine("Помилка: ділення на нуль!");
+}
+d
+static double CalculateSquareOfDivision(int a, int b)
+{
+    double division = (double)a / b; 
+    return Math.Pow(division, 2); 
+}
 // 6
 Console.WriteLine("\n Обчислення математичного виразу");
 Console.Write("n (ціле) = "); int n = int.Parse(Console.ReadLine()!);
